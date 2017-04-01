@@ -1,0 +1,381 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html { background: #888; }
+
+body {
+  color: #fff;
+  font-family: 'Meiryo', sans-serif;
+  font-size: 15px;
+}
+
+img.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -99;
+  width: auto;
+  height: auto;
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.8;
+}
+
+.cont-border {
+  margin: 0 auto 60px;
+  border-radius: 20px 10px 20px 15px;
+  background: #00424F;
+  border-bottom: 11px solid #00424F;
+  border-left: 7px solid #00424F;
+  box-shadow: -5px 7px 25px rgba(0,0,0,1);
+}
+
+.cont-border,
+.site-container {
+  display: block;
+  width: 800px;
+  max-width: 100%;
+}
+
+.site-container {
+  padding: 10px 0 5px;
+  margin: 0 auto;
+  border-radius: 12px 10px 10px 11px;
+  background: #00778E;
+}
+
+h1 {
+  width: 800px;
+  max-width: 100%;
+  padding: 17px 0;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  text-shadow: 0 0 .8em #000;
+}
+
+input {
+  padding: 6px 2px 5px;
+  border-radius: 3px;
+  font-size: 1.25em;
+  width: 70%;
+  max-width: 275px;
+}
+
+#kotoba {
+  font-weight: bold;
+}
+
+textarea {
+  padding-top: 3px;
+  font-size: 1em;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 20px #000;
+}
+
+.pointer { cursor: pointer; }
+
+
+.form-wrap {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  right: 4px;
+  width: 800px;
+  max-width: 95%;
+}
+
+.section-wrap {
+  clear: both;
+  display: block;
+  width: 100%;
+}
+
+.form-field,
+.form-title {
+  display: inline-block;
+  float:left;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.form-title {
+  width: 30%;
+  font-size: 1.3em;
+}
+
+.form-field {
+  width: 70%;
+}
+
+
+#add-teigi-button {
+  border-radius: 4px 0 0 4px;
+}
+
+#add-teigi-button:hover,
+#add-teigi-button:hover {
+  box-shadow: 0px 0px 10px #fff;
+}
+
+#reset-teigi-button {
+  border-radius: 0 4px 4px 0;
+}
+
+#reset-teigi-button:hover,
+#reset-teigi-button:focus {
+  box-shadow: 0px 0px 10px #fff;
+}
+
+#add-teigi-button,
+#reset-teigi-button {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+#teigi-cont {
+  clear: both;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* this class is for the textarea,
+   not the div surrounding it */
+.teigi-box {
+  width: 100%;
+  border-radius: 5px;
+  height: 60px;
+}
+
+.teigi-pad {
+  clear: both;
+  padding-top: 10px;
+}
+
+
+.shortcut {
+  font-size: .8em;
+  position: relative;
+  bottom: .1em;
+  opacity: .9;
+  float: right:
+}
+
+.add-button-wrap {
+  clear: both;
+  display: block;
+  padding: 20px 0;
+}
+
+#add-button {
+  display: block;
+  width: 50%;
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.button {
+  padding: 5px 7px;
+  font-size: 1.1em;
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+#add-button,
+.button { transition: box-shadow 0.2s; }
+
+.red { background: #BF0012; }
+.orange { background: #ff8200; }
+.gray { background: #333; }
+
+
+#add-button:hover, #add-button:focus,
+.button:hover, .button:focus {
+  box-shadow: 0px 0px 10px #fff;
+}
+
+
+.left { float: left; }
+.right { float: right; }
+.right-text { text-align: right; }
+
+.output {
+  padding-top: 2em;
+  width: 100%;
+}
+
+#finish-box {
+  margin-top:20px;
+  width: 100%;
+  height: 400px;
+}
+
+.credits {
+  color: #fff;
+  width: 100%;
+  height: auto;
+  padding: 35px 0;
+  display: block;
+}
+
+.credit-half-30 { width: 40%; float: right;}
+.credit-half-70 { width: 60%; }
+
+.credit-half-30,
+.credit-half-70 {
+  display: inline-block;
+}
+
+.credit-chunk-100 {
+    clear: both;
+    display: block;
+    width: 100%;
+    padding: 30px 0 0;
+}
+
+.credits i {
+  padding: 0 15px;
+  color: #fff;
+}
+
+.credits a {
+  color: #ff8200;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.credits a:hover, .credits a:focus,
+.credits i:hover, .credits i:focus {
+  color: #000;
+}
+
+
+/* MEDIA QUERIES
+###############################
+############################ */
+
+@media (max-width: 815px) {
+  html {
+    height: auto;
+  }
+  img.bg { width: 100%; }
+  .cont-border,
+  .site-container {
+    border: none;
+    box-shadow: none;
+    margin: 0 auto;
+    border-radius: 0;
+    background: #00778E;
+  }
+  .cont-border {
+    width: 100%;
+    padding: 0;
+  }
+  .credits { padding: 40px 0; }
+}
+
+/* This takes care of the teigi buttons stacking */
+/* on top of eachother  */
+@media (max-width: 743px) {
+  #add-teigi-button,
+  #reset-teigi-button {
+    width: 235px;
+    max-width: 95%;
+    text-align: left;
+    border-radius: 4px;
+  }
+  #reset-teigi-button {
+    margin-top: 10px;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .credits { padding: 20px 0; }
+  .credit-half-70,
+  .credit-half-30,
+  .credit-chunk-100 {
+    display: block;
+    width: 100%;
+    clear: both;
+    text-align: center;
+    padding: 20px 0;
+  }
+}
+
+
+
+/* ANIMATIONS
+###############################
+############################ */
+
+.animate-glow { animation: glow-scale .15s; }
+.animate-flip { animation: x-flip .5s; }
+.animate-spin { animation: x-spin 1s ease-out; }
+
+@keyframes x-flip {
+  0% {
+    box-shadow: 0px 0px 0px #fff;
+    transform: rotateX(0deg);
+  }
+  50% { box-shadow: 0px 0px 30px #fff; }
+  100% {
+    transform: rotateX(360deg);
+    box-shadow: 0px 0px 0px #fff;
+  }
+}
+
+@keyframes x-spin {
+  0% {
+    box-shadow: 0px 0px 0px #fff;
+    transform: rotateY(0deg);
+  }
+    18% { color: #fff; }
+    19% { color: #BF0012; }
+
+  50% {
+    box-shadow: 0px 0px 80px #fff;
+    transform: rotateY(180deg);
+  }
+    69% { color: #BF0012; }
+    70% { color: #fff; }
+
+  100% {
+    box-shadow: 0px 0px 0px #fff;
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes glow-scale {
+  0% {
+    box-shadow: 0px 0px 0px #fff;
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0px 0px 40px #fff;
+    transform: scale(1.05);
+  }
+  100% {
+    box-shadow: 0px 0px 0px #fff;
+    transform: scale(1);
+  }
+}

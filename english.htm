@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <link rel="stylesheet" type="text/css" href="styles.css">
+      <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+      <link rel="icon" href="favicon.ico" type="image/x-icon">
+      <meta charset="UTF-8">
+      <title>Jisho-Inject &#x21CC; Definition Generator</title>
+  </head>
+
+  <body>
+    <img class="bg" src="img/time-lapse.jpg">
+    <h1>辞書-Inject</h1>
+  <div class="cont-border">
+  <div class="site-container">
+    <div class="form-wrap">
+      <div class="section-wrap">
+        <div class="form-title">Word: </div>
+        <div class="form-field"><input type="text" id="kotoba"></input>&nbsp;</div>
+      </div> <!-- section-wrap -->
+
+      <div class="section-wrap">
+        <div class="form-title">Reading: </div>
+        <div class="form-field"><input type="text" id="yomigana" placeholder=" (Optional)"></input>&nbsp;</div>
+      </div> <!-- section-wrap -->
+
+      <div class="section-wrap">
+        <div class="form-title">Part of Speech: </div>
+        <div class="form-field"><input type="text" id="hinshi" placeholder=" (Optional)"></input>&nbsp;</div>
+      </div> <!-- section-wrap -->
+
+      <div class="section-wrap">
+        <div class="form-title">Definition: </div>
+          <div class="form-field">
+            <div id="add-teigi-button" class="button glow-btn pointer gray left">
+              &nbsp;<i class="fa fa-plus" aria-hidden="true"></i>&nbsp;Add Definition&nbsp;<span class="shortcut">&#40;Ctrl&nbsp;&#43;&nbsp;&#47;&nbsp;&#41;&nbsp;</span>
+            </div>
+            <div id="reset-teigi-button" class="button glow-btn pointer red left">
+              &nbsp;<i class="fa fa-repeat" aria-hidden="true"></i>&nbsp;Reset Definitions&nbsp;<span class="shortcut">&#40;Alt&nbsp;&#43;&nbsp;&#47;&nbsp;&#41;&nbsp;</span>
+            </div>
+          </div><!-- form-field -->
+        </div> <!-- section-wrap -->
+
+
+          <div id="teigi-cont"> <!-- stands for teigi-container -->
+          <div class="teigi-pad">
+            <textarea id="teigi-1" class="teigi-box first-box" placeholder=" Definition"></textarea>
+          </div>
+        </div> <!-- teigi-cont -->
+
+
+        <div class="add-button-wrap">
+          <div id="add-button" class="flip-btn orange pointer">
+            Add Entry<br /><span style="font-size:.8em;opacity:.9;">
+              &#40;Ctrl &#43; Enter&#41;</span>
+          </div> <!-- #add-button -->
+        </div> <!-- add-button-wrap -->
+
+        <div class="output" id="output">
+          <div id="copy-button" class="button flip-btn left orange pointer" data-clipboard-action="cut" data-clipboard-target='#finish-box'>
+            Copy Output&nbsp;<span class="shortcut">&#40;Ctrl&nbsp;&#43;&nbsp;Space&#41;&nbsp;</span></div>
+
+          <div id='zenkai' class="button flip-btn right red pointer">
+            Obliterate</div>
+
+        <textarea id="finish-box"></textarea>
+      </div> <!-- output -->
+      <div class="credits">
+        <span class="credit-half-70">
+        &nbsp;Site powered by:
+        <a href="https://en.wikipedia.org/wiki/Coffee" alt="coffee">
+          <i class="fa fa-coffee" aria-hidden="true"></i></a>
+        <a href="https://fontawesome.io/" alt="font awesome">
+          <i class="fa fa-font-awesome" aria-hidden="true"></i></a>
+        <a href="https://clipboardjs.com/" alt="clipboard dot js">
+          <i class="fa fa-clipboard" aria-hidden="true"></i></a>
+        </span> <!-- credit-half -->
+
+        <span class="credit-half-30 right-text">
+            Created by <a href="#" class="jesse">JESSE</a>
+          </span> <!-- credit-half -->
+
+        <span class="credit-chunk-100">
+           &nbsp;View the <a href="#" alt="guide">guide</a>. <a href="index.htm" alt="japanese version">日本語版</a>が欲しい?
+        </span>
+
+      </div> <!-- credits -->
+
+    </div> <!-- form-wrap -->
+  </div> <!-- site-container -->
+  </div> <!-- cont-border -->
+
+  <script src="clipboard.min.js"></script>
+  <script src="script.js"></script>
+  <script src="animations.js"></script>
+
+</body>
+</html>
