@@ -3,7 +3,27 @@ Jisho-Inject (pronounced 'g-show', or 'jee-show') is made to help automate the p
 
 I will soon add an Anki deck with a sample card that will have the CSS in it for using Jisho-Inject. Formats dictionary definitions into a specific HTML template for use with Anki (the SRS application by Damien Elmes).
 
-The site has an English version and a Japanese version. Since I study Japanese, the app is targeted for Japanese learners, but it can be used to make cards for any language or subject. 
+The site has an English version and a Japanese version. Since I study Japanese, the app is targeted for Japanese learners, but it can be used to make cards for any language or subject.
+
+## Usage
+To get started, download the project and open index.htm, or go to <website coming soon>.com/jisho-inject.
+1. Add the target word to the first field. Add the reading/pronunciation of it to the second (this may be more Japanese specific, but I'm sure there are situations in other languages where this would apply). Add the part of speech to the third field. Add the definition to the fourth.
+
+2. If the word has more than one definition, click **定義追加 / Add Definition**. Copy and paste in number of definitions.
+
+_Note: If you accidentally add too many you can reset them to one, but you will lose any content in the extra boxes._
+
+3. When you have input all information into the fields, click **追加 / Add Entry**. This adds the term and it's definition info into the output box.
+
+4. After you have all the definitions into the output box for the Anki card, click **コピーする / Copy to Clipboard**.
+
+5. Go into Anki, go to the field where you put your word definitions (in my template it is called "Definitions"), and press **Ctrl + Shift + X** to open the HTML editor. Now press **Ctrl + V** paste the content you copied from the app.
+
+## Shortcuts
+**Ctrl + /** — add extra definition field
+**Alt + /** — reset number of definition fields to one
+**Ctrl + Enter** — add definition to final output area
+**Ctrl + Space** — copy and clear (so basically cut) output area for pasting into Anki
 
 ## Is it cross-browser compatible?
 The app was built primarily for use with Google Chrome. Since I meant it somewhat just for personal use, I didn't consider going cross-browser. I am not sure how many people will end up finding it useful, but I may add cross-browser support in the future. It also seems to work fine in Firefox. The only issue is that Firefox adds a space to the output box when using the Copy button keyboard shortcut, and Chrome does not (I prefer it not to add the space, so Chrome gives me the desired functionality.)
