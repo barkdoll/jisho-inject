@@ -1,5 +1,5 @@
 # 辞書-Inject / Jisho-Inject
-Jisho-Inject (pronounced 'g-show', or 'jee-show') is made to help automate the process of adding dictionary definitions into your Anki cards. It parses the proper HTML for my specified template and aligns things using the included CSS.
+Jisho-Inject (pronounced 'g-show', or 'jee-show') is made to help automate the process of adding dictionary definitions into your [Anki](https://apps.ankiweb.net/) cards. It parses the proper HTML for my specified template and aligns things using the included CSS.
 
 I will soon add an Anki deck with a sample card that will have the CSS in it for using Jisho-Inject. Formats dictionary definitions into a specific HTML template for use with Anki (the SRS application by Damien Elmes).
 
