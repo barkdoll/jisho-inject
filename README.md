@@ -28,10 +28,12 @@ _Note: If you accidentally add too many you can reset them to one, but you will 
 **Ctrl + Space** — copy and clear (so basically cut) output area for pasting into Anki
 
 ## Is it cross-browser compatible?
-The app was built primarily for use with Google Chrome. Since I meant it somewhat just for personal use, I didn't consider going cross-browser. I am not sure how many people will end up finding it useful, but I may add cross-browser support in the future. It also seems to work fine in Firefox. The only issue is that Firefox adds a space to the output box when using the Copy button keyboard shortcut, and Chrome does not (I prefer it not to add the space, so Chrome gives me the desired functionality.)
+The app was built primarily for use with Google Chrome. Since I meant it somewhat just for personal use, I didn't consider going cross-browser. I am not sure how many people will end up finding it useful, but I may add cross-browser support in the future. It also seems to work fine in Firefox. The only issue is that Firefox adds a space to the output box when using the Copy button keyboard shortcut, and Chrome does not (I prefer it not to add the space, so Chrome gives me the desired functionality).
 
 ## How did you build it?
 This was my first ever application. I wrote it using purely HTML, CSS, and JavaScript. No frameworks. No libraries. Not even jQuery. I wanted to solidify the few concepts I had learned in JavaScript by adding functionality to something. This application was perfect for that.
+
+The animations were made with CSS keyframes, and they are triggered using JavaScript to add an animation class to the clicked button.
 
 ## Credits
 Other credit goes to Zeno Rocha, who created [clipboard.js](https://clipboardjs.com "clipboard.js homepage"), which was used to add clipboard functionality to Jisho-Inject, and also to the wonderful people over at [Font Awesome](http://fontawesome.io/ "Font Awesome") for creating a wonderful library of free icons.
