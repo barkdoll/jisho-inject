@@ -10,7 +10,6 @@ To get started, download the project and open index.htm, or go to <website comin
 1. Add the target word to the first field. Add the reading/pronunciation of it to the second (this may be more Japanese specific, but I'm sure there are situations in other languages where this would apply). Add the part of speech to the third field. Add the definition to the fourth.
 
 2. If the word has more than one definition, click **定義追加 / Add Definition**. Copy and paste in number of definitions.
-
 _Note: If you accidentally add too many you can reset them to one, but you will lose any content in the extra boxes._
 
 3. When you have input all information into the fields, click **追加 / Add Entry**. This adds the term and it's definition info into the output box.
@@ -21,8 +20,11 @@ _Note: If you accidentally add too many you can reset them to one, but you will 
 
 ## Shortcuts
 **Ctrl + /** — add extra definition field
+
 **Alt + /** — reset number of definition fields to one
+
 **Ctrl + Enter** — add definition to final output area
+
 **Ctrl + Space** — copy and clear (so basically cut) output area for pasting into Anki
 
 ## Is it cross-browser compatible?
