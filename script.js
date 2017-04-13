@@ -127,6 +127,8 @@ function clearFields() {
   defCount = 1;
   // Resets the counted number of extra definitions
   extraCount = defCount - 1;
+
+  document.getElementById('kotoba').focus();
 }
 
 function zenKai() {
