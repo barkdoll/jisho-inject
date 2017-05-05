@@ -6,7 +6,7 @@ I will soon add an Anki deck with a sample card that will have the CSS in it for
 The site has an English version and a Japanese version. Since I study Japanese, the app is targeted for Japanese learners, but it can be used to make cards for any language or subject.
 
 ## Usage
-To get started, go to websitecomingsoon.com/jisho-inject. If I have not put a proper URL yet here, you will have to download the project and open english.htm for the English version, or index.htm for the Japanese Version.
+To get started, go to the [Jisho-Inject project page](http://jessebarkdoll.com/projects/jisho-inject/index.htm) on my website. You can alternatively download the master branch here on GitHub and open english.htm for the English version, or index.htm for the Japanese Version.
 1. Add the target word to the first field. Add the reading/pronunciation of it to the second (this may be more Japanese specific, but I'm sure there are situations in other languages where this would apply). Add the part of speech to the third field. Add the definition to the fourth.
 
 2. If the word has more than one definition, click **定義追加 / Add Definition**. Copy and paste in number of definitions.
