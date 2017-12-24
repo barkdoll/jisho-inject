@@ -1,7 +1,7 @@
 // Declaring all my vars
 var kotoba, hinshi, yomigana, teigi;
 var teigiContainer, defCount, extraCount, extraBoxes;
-var entry, entries, finishBox;
+var entries, finishBox;
 
 entries = [];
 extraCount = [];
@@ -26,7 +26,7 @@ finishBox = document.getElementById('finish-box');
 //  ################################################
 //  ################################################
 
-// Keeps track of the number of definition boxes
+// Counts number of definition boxes
 defCount = 1;
 
 // Allows one to add extra definition boxes and
@@ -41,75 +41,82 @@ function addTeigiBox() {
   newBox.className = 'teigi-pad';
   newBox.innerHTML = "<textarea id='teigi-" + defCount + "' class='teigi-box' placeholder=' Definition'></textarea>";
   teigiContainer.appendChild(newBox);
-
 }
 
 function resetTeigi() {
   defCount = 1;
-
   while (teigiContainer.childNodes.length > 5) {
-  teigiContainer.removeChild(teigiContainer.lastChild);
+    teigiContainer.removeChild(teigiContainer.lastChild);
   }
-
 }
-
 
 // Assigns variables to the textfields so
 // they can be parsed into output definitions
-function getFields() {
-
-  kotoba = document.getElementById('kotoba').value;
-  yomigana = document.getElementById('yomigana').value;
-  hinshi = document.getElementById('hinshi').value;
-
-  // This IIFE checks whether to create a basic entry or ordered list entry
-  // and returns the parsed defintion.
-  (function() {
-    if (defCount === 1) {
-      teigi = '<br />\n' + document.getElementById('teigi-1').value;
-    } else {
-      var list = [];
-      list.push('<ol>');
-      // iterates through the teigi-boxes
-      // wraps them in <li> tags
-      for (i = 1; i <= defCount; i++) {
-        list.push('<li>' + document.getElementById('teigi-' + i).value + '</li>');
+function getEntry() {
+  var entry = {
+    kotoba: document.getElementById('kotoba').value,
+    yomigana: document.getElementById('yomigana').value,
+    hinshi: document.getElementById('hinshi').value,
+    teigi: (function() {
+      var definition;
+      if (defCount === 1) {
+        definition = document.getElementById('teigi-1').value;
+      } else {
+        var list = [];
+        // iterates through the teigi-boxes
+        // to create array
+        for (i = 1; i <= defCount; i++) {
+          list.push(document.getElementById('teigi-' + i).value);
+        }
+        definition = list;
       }
-      list.push('</ol>');
-      // joins <ol> and <li> tags and completes list
-      teigi = list.join('\n');
-    }
-    return teigi;
-  })();
-
-  // This is a global var declared at the top of this file
-  entry = { };
-
-  // Here we assign the values from each field to the entry object,
-  // and push it into the entries array.
-  entry.kotoba = kotoba;
-  entry.yomigana = yomigana;
-  entry.hinshi = hinshi;
-  entry.teigi = teigi;
-
+      return definition;
+    })()
+  } // entry
   entries.push(entry);
+  return entry;
+} // end getEntry()
 
-} // end of getFields function
-
-
+function parseTeigi(def) {
+  var teigiStr;
+  if (Array.isArray(def)) {
+    var list = [];
+    list.push('<ol>');
+    // iterates through the teigi-boxes
+    // wraps them in <li> tags
+    for (i = 1; i <= def.length; i++) {
+      list.push('<li>' + document.getElementById('teigi-' + i).value + '</li>');
+    }
+    list.push('</ol>');
+    // joins <ol> and <li> tags and completes list
+    teigiStr = list.join('\n');
+  } else {
+    teigiStr = '<br />\n' + document.getElementById('teigi-1').value;
+  }
+  return teigiStr;
+};
 
 // Adds entries to the finish box.
 function parseEntry() {
+  var data = getEntry();
   if (entries.length !== 0 && finishBox.value !== '') {
-    getFields();
-    finishBox.value += '\n\n' + '<div>【' + kotoba + '】' + yomigana + ' 〔' + hinshi + '〕' + teigi + '</div>';
+    finishBox.value += '\n\n' + '<div>';
+    finishBox.value += '【' + data.kotoba + '】' + data.yomigana;
+    if (data.hinshi != '') {
+      finishBox.value += ' 〔' + data.hinshi + '〕';
+    }
+    finishBox.value += parseTeigi(data.teigi) + '</div>';
   } else {
-    getFields();
-    finishBox.value = '【' + kotoba + '】' + yomigana + ' 〔' + hinshi + '〕' + teigi;
+    finishBox.value += '【' + data.kotoba + '】' + data.yomigana;
+    if (data.hinshi != '') {
+      finishBox.value += ' 〔' + data.hinshi + '〕';
+    }
+    finishBox.value += parseTeigi(data.teigi);
   }
-}
+} // end parseEntry()
 
-// Empties out the text from all fields
+
+// Empty text from all fields
 function clearFields() {
   document.getElementById('kotoba').value = '';
   document.getElementById('yomigana').value = '';
@@ -127,7 +134,6 @@ function clearFields() {
   defCount = 1;
   // Resets the counted number of extra definitions
   extraCount = defCount - 1;
-
   document.getElementById('kotoba').focus();
 }
 

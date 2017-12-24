@@ -1,0 +1,7 @@
+FUTURE FEATURES FOR JISHO-INJECT
+☐ Make a Node.js backend that can web scrape the entries from weblio.jp
+☐ Make those entries viewable from the Jisho-Inject page instead of having to switch to the site in your browser
+☐ Make them selectable so that you can generate a list of your entries for the card.
+☐ Have the definition structure analyzed so that the proper HTML tags are automatically generated (this eliminates any copy-pasting definitions from the site to the app)
+☐ Have everything generated automatically so that entries are ready at the click of a 'Copy to clipboard button'
+☐ Maybe add an undo button to revert back to the previous entry list if accidentally copied?
